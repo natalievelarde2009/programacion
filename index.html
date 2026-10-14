@@ -1,14 +1,101 @@
-<!DOCTYPE html>
-<html lang="es">
+!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Página</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REEVA</title>
+  <link rel="stylesheet" href="Style.css">
 </head>
-
 <body>
-    <h1>Kodda</h1>
-    <p>Stronger together</p>
+ 
+  <!-- ====== PÁGINA 1: Header + Hero ====== -->
+  <header class="header">
+    <img src="img/logo-reeva.png" alt="REEVA" class="header__logo">
+    <nav class="header__nav">
+      <a href="#" class="active">Home</a>
+      <a href="#">Collections Centers</a>
+      <a href="#">About REEVA</a>
+      <a href="#">Marketplace</a>
+      <a href="#">Blog</a>
+    </nav>
+    <div class="header__icons">
+      <a href="#" class="icon-user"><img src="img/user.svg" alt="Cuenta"></a>
+      <a href="#" class="icon-cart"><img src="img/cart.svg" alt="Carrito"><span>0</span></a>
+    </div>
+  </header>
+ 
+  <section class="hero">
+    <img src="img/hero.jpg" alt="" class="hero__img">
+    <div class="hero__content">
+      <h1>Transform your forgotten clothes</h1>
+      <p>REEVA connects people, local talent, and sustainable fashion to give every garment a second life.</p>
+    </div>
+  </section>
+ 
+  <!-- ====== PÁGINA 2: The Impact of Fashion ====== -->
+  <section class="impact">
+    <div class="impact__left">
+      <h2>The Impact<br>of Fashion</h2>
+      <p>The textile industry is the most polluting on the planet. Every year, 92 million tons of textile waste pile up, creating a global environmental crisis that needs an urgent response.</p>
+    </div>
+    <div class="impact__right">
+      <div class="stat">
+        <span class="stat__num">85%</span>
+        <p>Percentage of clothing that ends up in landfills.</p>
+      </div>
+      <div class="stat">
+        <span class="stat__num">500</span>
+        <p>Diseñadores emergentes que impulsamos a través de REEVA.</p>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ====== PÁGINA 3: 92 millones ====== -->
+  <section class="waste">
+    <img src="img/residuos.jpg" alt="" class="waste__img">
+    <h2 class="waste__num">92<br>millones</h2>
+    <p class="waste__text">Toneladas de residuos textiles generadas anualmente.</p>
+  </section>
+ 
+  <!-- ====== PÁGINA 4: Our Solution ====== -->
+  <section class="solution">
+    <div class="solution__text">
+      <h2>Our<br>Solution</h2>
+      <p>REEVA connects donors, emerging designers, and conscious buyers, driving a circular economy where every garment tells a new story.</p>
+    </div>
+    <div class="solution__img">
+      <img src="img/equipo.jpg" alt="Equipo REEVA">
+    </div>
+  </section>
+ 
+  <!-- ====== PÁGINA 5: How It Works ====== -->
+  <section class="how">
+    <h2>How It Works</h2>
+    <p class="how__intro">A process designed to close the fashion loop and give new life to every garment.</p>
+ 
+    <div class="how__steps">
+      <article class="step">
+        <span class="step__num">01</span>
+        <h3>Donation</h3>
+        <p>Send your forgotten clothes to our collection centers to start your new story.</p>
+      </article>
+      <article class="step">
+        <span class="step__num">02</span>
+        <h3>Transformation</h3>
+        <p>Emerging designers reimagine each garment using artisanal upcycling techniques.</p>
+      </article>
+      <article class="step">
+        <span class="step__num">03</span>
+        <h3>Post</h3>
+        <p>Each piece is documented with its story and shared on our digital platform.</p>
+      </article>
+      <article class="step">
+        <span class="step__num">04</span>
+        <h3>Purchase</h3>
+        <p>Find your new piece with a story and support our sustainable mission.</p>
+      </article>
+    </div>
+  </section>
+ 
 </body>
-
 </html>
