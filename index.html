@@ -3,198 +3,594 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>REEVA</title>
-  <link rel="stylesheet" href="style.css">
+  <title>REEVA | Upcycled streetwear from Panamá</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;800&display=swap">
+  <link rel="stylesheet" href="estilos.css">
 </head>
-<body>
+<body data-page="home">
+  <!-- El menú, el footer, la bolsa y la vista rápida los crea script.js -->
 
-  <!-- ====== PÁGINA 1: Header + Hero ====== -->
-  <header class="header">
-    <img src="img/logo.png" alt="REEVA" class="header__logo">
-    <nav class="header__nav">
-      <a href="#" class="active">Home</a>
-      <a href="#">Collections Centers</a>
-      <a href="#">About REEVA</a>
-      <a href="#">Marketplace</a>
-      <a href="#">Blog</a>
-    </nav>
-    <div class="header__icons">
-      <a href="#" class="icon-user"><img src="img/user.svg" alt="Cuenta"></a>
-      <a href="#" class="icon-cart"><img src="img/cart.svg" alt="Carrito"><span>0</span></a>
+  <!-- ===== PÁGINA: HOME ===== -->
+  <main class="page" id="home" data-title="Home" hidden>
+  <!-- ====== HERO: REEVA gigante + modelo ====== -->
+  <section class="hero" id="hero">
+    <p class="hero__tag">Where every outfit tells a new story</p>
+    <div class="hero__word" aria-hidden="true"><span>R</span><span>E</span><span>E</span><span>V</span><span>A</span></div>
+    <img class="hero__model" id="heroModel" src="img/modelo-morena.png" alt="Model wearing a raw denim jacket and wide denim pants">
+    <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
+      <defs><path id="circ" d="M100 100m-74 0a74 74 0 1 1 148 0a74 74 0 1 1-148 0"/></defs>
+      <circle cx="100" cy="100" r="96" fill="#f7e6cb"/>
+      <text><textPath href="#circ">UPCYCLED · ONE OF ONE · MADE IN PANAMÁ · </textPath></text>
+      <path d="M100 76l6 18h19l-15 11 6 18-16-11-16 11 6-18-15-11h19z" fill="#cb1b03"/>
+    </svg>
+    <div class="hero__copy">
+      <h1 class="hero__title">Transform your <span class="stitch">forgotten</span> clothes</h1>
+      <div class="hero__ctas">
+        <a href="#marketplace" class="btn btn--cream">Explore Marketplace <span class="arr">&rarr;</span></a>
+        <a href="#collections" class="btn btn--ghost hero__ghost">Walk into the closet</a>
+      </div>
     </div>
-  </header>
-
-  <section class="hero">
-    <img src="img/hero.jpg" alt="Prendas transformadas REEVA" class="hero__img">
-    <div class="hero__content">
-      <h1>Transform your forgotten clothes</h1>
-      <p>REEVA connects people, local talent, and sustainable fashion to give every garment a second life.</p>
+    <div class="hero__side">
+      <p>REEVA connects people, local talent and sustainable fashion to give every garment a second life.</p>
+      <div class="hero__proof">
+        <div class="hero__dots">
+          <img src="img/look-azotea-2.jpg" alt="">
+          <img src="img/look-chaleco.jpg" alt="">
+          <img src="img/look-camisa.jpg" alt="">
+        </div>
+        <p><b>450+ garments</b> living their second life</p>
+      </div>
     </div>
   </section>
 
-  <!-- ====== PÁGINA 2: The Impact of Fashion ====== -->
+  <!-- ====== CINTAS CRUZADAS ====== -->
+  <div class="crossed" aria-hidden="true">
+    <div class="marquee marquee--blue marquee--back"><div class="marquee__track">
+      <span>Donate</span><span>Transform</span><span>Post</span><span>Purchase</span><span>Repeat</span>
+    </div></div>
+    <div class="marquee marquee--tilt"><div class="marquee__track">
+      <span>Every garment tells a new story</span><span>One of one</span><span>Made by local talent</span>
+    </div></div>
+  </div>
+
+  <!-- ====== LOOKBOOK ====== -->
+  <section class="look" id="look">
+    <p class="look__tag reveal">New season · street lookbook</p>
+    <h2 class="look__word" aria-label="Lookbook">
+      <span>L</span><span>O</span><span>O</span><span>K</span><span>B</span><span>O</span><span>O</span><span>K</span>
+    </h2>
+    <div class="look__people">
+      <img class="look__p p1" src="img/modelo-gorra.png" alt="Model in an oversized denim jacket and cap" data-speed=".10">
+      <img class="look__p p2" src="img/modelo-ola.png" alt="Model in a wave-pattern denim jacket" data-speed=".18">
+      <img class="look__p p3" src="img/modelos-negro.png" alt="Two models in black tees and wide jeans" data-speed=".06">
+    </div>
+  </section>
+
+  <!-- ====== IMPACT ====== -->
   <section class="impact">
-    <div class="impact__left">
-      <h2>The Impact<br>of Fashion</h2>
-      <p>The textile industry is the most polluting on the planet. Every year, 92 million tons of textile waste pile up, creating a global environmental crisis that needs an urgent response.</p>
-    </div>
-    <div class="impact__right">
-      <div class="stat">
-        <span class="stat__num">85%</span>
-        <p>Percentage of clothing that ends up in landfills.</p>
+    <div class="wrap impact__grid">
+      <div class="impact__sticky">
+        <span class="eyebrow">The problem</span>
+        <h2 class="h-xl reveal">The impact<br>of fashion</h2>
+        <p class="lead reveal" data-d="1">The textile industry is one of the most polluting on the planet — and most of what it makes is thrown away.</p>
       </div>
-      <div class="stat">
-        <span class="stat__num">500</span>
-        <p>Diseñadores emergentes que impulsamos a través de REEVA.</p>
+      <div class="impact__stats">
+        <article class="stat reveal">
+          <span class="stat__num"><span data-count="85">0</span>%</span>
+          <p>of all clothing ends up in landfills.</p>
+        </article>
+        <article class="stat stat--blue reveal">
+          <span class="stat__num"><span data-count="92">0</span>M</span>
+          <p>tons of textile waste every year.</p>
+        </article>
+        <article class="stat stat--cream reveal">
+          <span class="stat__num"><span data-count="500">0</span></span>
+          <p>emerging designers powered through REEVA.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ====== PÁGINA 3: 92 millones ====== -->
-  <section class="waste">
-    <img src="img/impacto.jpg" alt="Montaña de residuos textiles" class="waste__img">
-    <h2 class="waste__num">92<br>millones</h2>
-    <p class="waste__text">Toneladas de residuos textiles generadas anualmente.</p>
+  <section class="waste" id="waste">
+    <div class="waste__img"><img src="img/fast-fashion.jpg" alt="A fast-fashion billboard whose dress turns into a mountain of discarded clothes" id="wasteImg"></div>
+    <div class="waste__copy">
+      <p class="waste__num">Fast fashion<br>has a cost.</p>
+      <p class="waste__text">92 million tons of textiles are thrown away every year.<br><b>We think they deserve better.</b></p>
+    </div>
   </section>
 
-  <!-- ====== PÁGINA 4: Our Solution ====== -->
+  <!-- ====== SOLUTION ====== -->
   <section class="solution">
-    <div class="solution__text">
-      <h2>Our<br>Solution</h2>
-      <p>REEVA connects donors, emerging designers, and conscious buyers, driving a circular economy where every garment tells a new story.</p>
-    </div>
-    <div class="solution__img">
-      <img src="img/equipo.jpg" alt="Equipo REEVA">
-    </div>
-  </section>
-
-  <!-- ====== PÁGINA 5: How It Works ====== -->
-  <section class="how">
-    <h2>How It Works</h2>
-    <p class="how__intro">A process designed to close the fashion loop and give new life to every garment.</p>
-
-    <div class="how__steps">
-      <article class="step">
-        <span class="step__num">01</span>
-        <h3>Donation</h3>
-        <p>Send your forgotten clothes to our collection centers to start your new story.</p>
-      </article>
-      <article class="step">
-        <span class="step__num">02</span>
-        <h3>Transformation</h3>
-        <p>Emerging designers reimagine each garment using artisanal upcycling techniques.</p>
-      </article>
-      <article class="step">
-        <span class="step__num">03</span>
-        <h3>Post</h3>
-        <p>Each piece is documented with its story and shared on our digital platform.</p>
-      </article>
-      <article class="step">
-        <span class="step__num">04</span>
-        <h3>Purchase</h3>
-        <p>Find your new piece with a story and support our sustainable mission.</p>
-      </article>
+    <div class="wrap solution__grid">
+      <div class="solution__photo reveal">
+        <img src="img/equipo.jpg" alt="The REEVA team wearing upcycled denim">
+        <span class="sticker s1">hand-made</span>
+        <span class="sticker s2">local talent ♥</span>
+      </div>
+      <div class="solution__copy">
+        <span class="eyebrow">Our solution</span>
+        <h2 class="h-xl reveal">A loop,<br>not a landfill.</h2>
+        <p class="lead reveal" data-d="1">REEVA connects donors, emerging designers and conscious buyers, driving a circular economy where every garment tells a new story.</p>
+        <div class="loop reveal" data-d="2" aria-label="Donors, designers and buyers in a loop">
+          <svg class="loop__ring" viewBox="0 0 300 300" aria-hidden="true"><circle cx="150" cy="150" r="118" fill="none" stroke="#25799b" stroke-width="2.5" stroke-dasharray="7 9"/><path d="M262 118l6 16-16-4" fill="none" stroke="#25799b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="loop__node n1">Donors</span>
+          <span class="loop__node n2">Designers</span>
+          <span class="loop__node n3">Buyers</span>
+          <span class="loop__center">♻</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ====== PÁGINA 6: Environmental Impact ====== -->
+  <!-- ====== HOW IT WORKS ====== -->
+  <section class="how" id="how">
+    <div class="wrap">
+      <div class="how__head">
+        <div>
+          <span class="eyebrow eyebrow--cream">How it works</span>
+          <h2 class="h-xl reveal">From your closet<br>to someone's favorite.</h2>
+        </div>
+        <p class="lead reveal" data-d="1">Four steps to close the fashion loop.</p>
+      </div>
+      <div class="steps">
+        <article class="step reveal" data-d="1">
+          <figure class="step__photo"><img src="img/clasificacion.jpg" alt="Donated clothes being sorted"></figure>
+          <span class="step__num">01</span>
+          <h3>Donation</h3>
+          <p>Drop your forgotten clothes at a collection center.</p>
+        </article>
+        <article class="step reveal" data-d="2">
+          <figure class="step__photo"><img src="img/taller.jpg" alt="A tailor sewing denim scraps"></figure>
+          <span class="step__num">02</span>
+          <h3>Transformation</h3>
+          <p>Local designers cut, patch and rebuild every piece.</p>
+        </article>
+        <article class="step reveal" data-d="3">
+          <figure class="step__photo step__photo--post" aria-hidden="true">
+            <span class="mini">
+              <img src="img/closet/top-cuadros-tartan.png" alt="">
+              <span class="mini__row"><b>Tartan Top</b><b>$58</b></span>
+              <span class="mini__story">Made from 3 flannel shirts ✦</span>
+            </span>
+          </figure>
+          <span class="step__num">03</span>
+          <h3>Post</h3>
+          <p>Each piece gets a tag with its story and goes online.</p>
+        </article>
+        <article class="step reveal" data-d="4">
+          <figure class="step__photo"><img src="img/look-chaleco.jpg" alt="Model wearing a denim vest and wide jeans"></figure>
+          <span class="step__num">04</span>
+          <h3>Purchase</h3>
+          <p>Someone finds their new favorite — and the loop closes.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== STREET LOOKS ====== -->
+  <section class="street">
+    <div class="wrap">
+      <div class="drops__head">
+        <div>
+          <span class="eyebrow">Worn our way</span>
+          <h2 class="h-l reveal">Street looks</h2>
+        </div>
+        <p class="lead street__lead">Denim, attitude and a little chaos. This is how REEVA looks outside the closet.</p>
+      </div>
+      <div class="bento">
+        <figure class="bento__a reveal"><img src="img/look-cierres.jpg" alt="Model in a top made of colorful zippers and baggy jeans"><figcaption>Zip-it top · one of one</figcaption></figure>
+        <figure class="bento__b bento--cut reveal" data-d="1"><img src="img/modelo-sentada.png" alt="Model in a dark denim jacket and mini skirt"></figure>
+        <figure class="bento__c reveal" data-d="2"><img src="img/look-camisa.jpg" alt="Model in a beige shirt and baggy jeans"></figure>
+        <figure class="bento__d reveal" data-d="3"><img src="img/look-cuero.jpg" alt="Model in a leather bomber jacket"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== NEW DROPS ====== -->
+  <section class="drops">
+    <div class="wrap">
+      <div class="drops__head">
+        <div>
+          <span class="eyebrow">Fresh off the rack</span>
+          <h2 class="h-l reveal">New drops</h2>
+        </div>
+        <a href="#marketplace" class="btn btn--ghost">See all pieces <span class="arr">&rarr;</span></a>
+      </div>
+      <div class="drops__grid" id="drops"></div>
+    </div>
+  </section>
+
+  <!-- ====== ENVIRONMENTAL IMPACT ====== -->
   <section class="env">
-    <h2>Environmental<br>Impact</h2>
-    <p class="env__intro">REEVA measures change through action. Every transformed garment prevents a significant impact on the planet.</p>
-
-    <div class="env__stats">
-      <div class="env__stat">
-        <h3>Recovered Kilograms</h3>
-        <span class="env__num">12,500 kg</span>
-        <p>Textiles saved from landfills and local recycling processes.</p>
-      </div>
-      <div class="env__stat">
-        <h3>Prendas Transformadas</h3>
-        <span class="env__num">450 garments</span>
-        <p>Creaciones únicas diseñadas para darle una segunda vida a la ropa.</p>
-      </div>
-      <div class="env__stat">
-        <h3>Emisiones Evitadas</h3>
-        <span class="env__num">12.5 T CO₂</span>
-        <p>Impacto positivo en el clima al evitar la producción de nuevas prendas.</p>
+    <div class="wrap">
+      <span class="eyebrow eyebrow--cream">Environmental impact</span>
+      <h2 class="h-xl reveal">We measure change<br>through action.</h2>
+      <div class="env__grid">
+        <article class="env__card reveal" data-d="1">
+          <h3>Recovered kilograms</h3>
+          <span class="env__num"><span data-count="12500">0</span> kg</span>
+          <p>Textiles saved from landfills and sent to local recycling.</p>
+        </article>
+        <article class="env__card reveal" data-d="2">
+          <h3>Transformed garments</h3>
+          <span class="env__num"><span data-count="450">0</span></span>
+          <p>Unique creations designed to give clothes a second life.</p>
+        </article>
+        <article class="env__card reveal" data-d="3">
+          <h3>Avoided emissions</h3>
+          <span class="env__num"><span data-count="12.5" data-dec="1">0</span> T CO₂</span>
+          <p>Positive climate impact by avoiding the production of new garments.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ====== PÁGINA 7: Nuestros Aliados ====== -->
+  <!-- ====== ALLIES ====== -->
   <section class="allies">
-    <h2>Nuestros Aliados</h2>
-    <p class="allies__intro">Impulsamos la innovación sostenible a través de la colaboración con instituciones líderes en educación y conservación ambiental.</p>
+    <div class="wrap">
+      <div class="allies__head">
+        <span class="eyebrow">Our allies</span>
+        <h2 class="h-l reveal">Stronger together</h2>
+        <p class="lead reveal" data-d="1">We drive sustainable innovation together with leading institutions in education and environmental conservation.</p>
+      </div>
+      <div class="allies__grid">
+        <article class="ally reveal" data-d="1">
+          <div class="ally__logo"><img src="img/inadeh-logo.png" alt="INADEH"></div>
+          <h3>INADEH</h3>
+          <p>Technical and professional training for young fashion talent.</p>
+        </article>
+        <article class="ally reveal" data-d="2">
+          <div class="ally__logo"><img src="img/universidad-panama-logo.png" alt="Universidad de Panamá"></div>
+          <h3>Universidad de Panamá</h3>
+          <p>Academic excellence driving innovation and social commitment.</p>
+        </article>
+        <article class="ally ally--photo reveal" data-d="3">
+          <img src="img/centros-comunitarios.jpg" alt="Community center">
+          <h3>Community centers</h3>
+          <p>Local partners committed to the circular economy and textile reuse.</p>
+        </article>
+        <article class="ally ally--photo reveal" data-d="4">
+          <img src="img/organizaciones-ambientales.jpg" alt="Environmental organizations">
+          <h3>Environmental organizations</h3>
+          <p>Partners in conservation and the reduction of industrial textile waste.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    <div class="allies__grid">
-      <article class="ally">
-        <div class="ally__logo">
-          <img src="img/inadeh-logo.png" alt="INADEH">
+  <!-- ====== CTA ====== -->
+  <section class="cta">
+    <div class="wrap">
+      <div class="cta__box">
+        <div class="cta__tags" aria-hidden="true">
+          <img src="img/etiquetas.png" alt="">
         </div>
-        <h3>INADEH</h3>
-        <p>Institución dedicada a la formación técnica y profesional de jóvenes talentos en el sector de la moda.</p>
+        <div class="cta__copy">
+          <h2 class="h-xl">Got clothes<br>you don't wear?</h2>
+          <p class="lead">Drop them at a REEVA collection center. Our designers will turn them into something someone will love.</p>
+          <div class="hero__ctas">
+            <a href="#donate" class="btn btn--cream">How to donate <span class="arr">&rarr;</span></a>
+            <a href="#collections" class="btn btn--ghost cta__ghost">Visit the closet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== PÁGINA: COLLECTIONS CENTERS ===== -->
+  <main class="page" id="collections" data-title="Collections Centers" hidden>
+  <!-- ====== EL CLOSET ====== -->
+  <section class="closet" id="closet" aria-label="REEVA closet">
+    <img src="img/logo.png" alt="REEVA" class="closet__logo">
+    <div class="closet__rod" aria-hidden="true"><span></span></div>
+
+    <!-- las prendas se crean solas desde script.js -->
+    <div class="closet__rack" id="rack"></div>
+
+    <!-- etiquetas que cuelgan junto a la prenda abierta -->
+    <div class="tags" id="tags">
+      <button type="button" class="tag tag--blue"><b id="tagType">Top</b></button>
+      <button type="button" class="tag tag--red"><b id="tagMat">Denim</b></button>
+      <button type="button" class="tag tag--cream"><b>1/1</b></button>
+    </div>
+
+    <!-- info de la prenda abierta -->
+    <div class="info" id="info">
+      <h2 class="info__name" id="infoName"></h2>
+      <div class="info__toggle" role="group" aria-label="View">
+        <button type="button" class="on" id="btnFront">FRONT</button>
+        <button type="button" id="btnStory">STORY</button>
+      </div>
+      <p class="info__made" id="infoMade"></p>
+    </div>
+
+    <button type="button" class="closet__arrow closet__arrow--l" id="arrL" aria-label="Previous">&#8249;</button>
+    <button type="button" class="closet__arrow closet__arrow--r" id="arrR" aria-label="Next">&#8250;</button>
+    <button type="button" class="closet__back" id="btnBack">&larr; back to the rack</button>
+
+    <!-- pie del closet -->
+    <div class="closet__foot" id="foot">
+      <p><b id="count">8</b> upcycled pieces from our collection centers · drag the rack · tap a garment to see its story</p>
+    </div>
+  </section>
+
+  <!-- ====== DEBAJO DEL CLOSET ====== -->
+  <section class="below">
+    <div class="wrap below__grid">
+      <div class="below__copy">
+        <span class="eyebrow">Collections Centers</span>
+        <h2 class="h-l">Every hanger here<br>started as a donation.</h2>
+        <p class="lead">This closet shows the kind of pieces our designers make from the clothes people drop at our collection centers: jackets, tops, skirts, dresses and jeans — each one rebuilt by hand.</p>
+        <div class="below__ctas">
+          <a href="#donate" class="btn">Donate your clothes <span class="arr">&rarr;</span></a>
+          <a href="#how" class="btn btn--ghost">How it works</a>
+        </div>
+      </div>
+      <figure class="below__photo"><img src="img/modelo-conjunto.png" alt="Model wearing an upcycled denim top and mini skirt"></figure>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== PÁGINA: ABOUT REEVA ===== -->
+  <main class="page" id="about" data-title="About REEVA" hidden>
+  <!-- ====== CABECERA ====== -->
+  <section class="ahero">
+    <div class="wrap ahero__grid">
+      <div class="ahero__copy">
+        <span class="eyebrow reveal">About REEVA</span>
+        <h1 class="h-xxl reveal" data-d="1">We give clothes a <span class="stitch">second</span> story.</h1>
+        <p class="lead reveal" data-d="2">Forgotten clothes in. One-of-one pieces out.</p>
+      </div>
+      <div class="collage" id="collage">
+        <figure class="collage__a"><img src="img/look-cierres.jpg" alt="Model in a top made of zippers"></figure>
+        <figure class="collage__b"><img src="img/look-chaleco.jpg" alt="Model in a denim vest and wide jeans"></figure>
+        <img class="collage__s s1" src="img/etiquetas.png" alt="">
+        <span class="collage__tag">est. Panamá</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MANIFIESTO ====== -->
+  <section class="manifesto">
+    <div class="wrap">
+      <p class="manifesto__text" id="manifesto">Nothing new is produced. Nothing is wasted. Everything is one of one.</p>
+    </div>
+  </section>
+
+  <!-- ====== DETRÁS DE LAS COSTURAS ====== -->
+  <section class="seams">
+    <div class="wrap">
+      <div class="seams__grid">
+        <figure class="seam reveal"><img src="img/clasificacion.jpg" alt="Donated clothes being sorted"><figcaption><b>01</b> Collect</figcaption></figure>
+        <figure class="seam reveal" data-d="1"><img src="img/taller.jpg" alt="A tailor sewing denim"><figcaption><b>02</b> Transform</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MISIÓN Y VISIÓN ====== -->
+  <section class="mv">
+    <div class="wrap mv__grid">
+      <article class="mv__card reveal">
+        <span class="eyebrow">Mission</span>
+        <h2>Close the fashion loop in Panamá.</h2>
       </article>
-
-      <article class="ally">
-        <div class="ally__logo">
-          <img src="img/universidad-panama-logo.png" alt="Universidad de Panamá">
-        </div>
-        <h3>Universidad de Panamá</h3>
-        <p>Centro de excelencia académica impulsando la innovación y el compromiso social a través de la educación.</p>
+      <article class="mv__card mv__card--blue reveal" data-d="1">
+        <span class="eyebrow eyebrow--cream">Vision</span>
+        <h2>A closet where every garment has a past.</h2>
       </article>
     </div>
   </section>
 
-  <!-- ====== PÁGINA 8: Centros y Organizaciones ====== -->
-  <section class="partners">
-    <div class="partners__grid">
-      <article class="partner">
-        <img src="img/centros-comunitarios.jpg" alt="Centro INADEH" class="partner__img">
-        <h3>Centros Comunitarios</h3>
-        <p>Aliados locales comprometidos con la economía circular y el reuso de materiales textiles.</p>
-      </article>
+  <!-- ====== VALORES ====== -->
+  <section class="values">
+    <div class="wrap">
+      <div class="vchips">
+        <span class="vchip reveal">♻ Circular first</span>
+        <span class="vchip vchip--blue reveal" data-d="1">✂ Local talent</span>
+        <span class="vchip vchip--cream reveal" data-d="2">◎ Full transparency</span>
+        <span class="vchip reveal" data-d="3">✦ Loud &amp; joyful</span>
+      </div>
+    </div>
+  </section>
 
-      <article class="partner">
-        <img src="img/organizaciones-ambientales.jpg" alt="Universidad de Panamá" class="partner__img">
-        <h3>Organizaciones Ambientales</h3>
-        <p>Partners en la conservación del medio ambiente y la reducción de residuos textiles industriales.</p>
+  <!-- ====== EQUIPO ====== -->
+  <section class="team">
+    <div class="wrap team__grid">
+      <figure class="team__photo reveal">
+        <img src="img/equipo.jpg" alt="The REEVA team in red hoodies and patchwork jeans">
+      </figure>
+      <div class="team__copy">
+        <span class="eyebrow">The crew</span>
+        <h2 class="h-l reveal">Young, local and a little obsessed with denim.</h2>
+        <div class="team__nums reveal" data-d="1">
+          <div><b><span data-count="500">0</span>+</b><span>designers</span></div>
+          <div><b><span data-count="450">0</span></b><span>pieces</span></div>
+          <div><b><span data-count="12500">0</span></b><span>kg saved</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== DONAR ====== -->
+  <section class="donate" id="donate">
+    <div class="wrap">
+      <div class="donate__head">
+        <span class="eyebrow eyebrow--cream">Donate</span>
+        <h2 class="h-xl reveal">Your old clothes,<br>someone's new favorite.</h2>
+      </div>
+      <div class="donate__grid">
+        <ol class="donate__steps">
+          <li class="reveal"><b>Sort</b> Clothes you haven't worn in a year.</li>
+          <li class="reveal" data-d="1"><b>Wash</b> Clean and dry, in a bag or box.</li>
+          <li class="reveal" data-d="2"><b>Drop off</b> At a REEVA collection center.</li>
+          <li class="donate__note reveal" data-d="3">✓ Denim, cotton, canvas &nbsp; ✕ Underwear, shoes, wet clothes</li>
+        </ol>
+        <form class="dform reveal" data-d="1" id="dform">
+          <h3>Tell us you're coming</h3>
+          <label>Your name <input name="name" required placeholder="Ana Pérez"></label>
+          <label>Email <input name="email" type="email" required placeholder="ana@email.com"></label>
+          <label>How many bags?
+            <select name="bags"><option>1 bag</option><option>2–3 bags</option><option>4 or more</option></select>
+          </label>
+          <button class="btn btn--cream" type="submit">Schedule my donation <span class="arr">&rarr;</span></button>
+          <p class="dform__msg" id="dmsg" role="status"></p>
+          <p class="dform__addr">Calle de la Innovación 123, Ciudad de Panamá</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== DISEÑADORES ====== -->
+  <section class="join" id="join">
+    <div class="wrap join__box reveal">
+      <div>
+        <span class="eyebrow">For designers</span>
+        <h2 class="h-l">Can you turn a jean into a jacket?</h2>
+      </div>
+      <form class="join__form" id="jform">
+        <input type="email" required placeholder="your@email.com" aria-label="Email">
+        <button class="btn" type="submit">Join the network <span class="arr">&rarr;</span></button>
+        <p class="dform__msg" id="jmsg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== PÁGINA: MARKETPLACE ===== -->
+  <main class="page" id="marketplace" data-title="Marketplace" hidden>
+  <!-- ====== CABECERA ====== -->
+  <section class="phead">
+    <div class="wrap phead__grid">
+      <div>
+        <span class="eyebrow reveal">One of one · Upcycled in Panamá</span>
+        <h1 class="h-xxl reveal" data-d="1">Market<span class="phead__accent">place</span></h1>
+      </div>
+      <div class="phead__side reveal" data-d="2">
+        <p class="lead">Every piece here was a forgotten garment. Now it's a single, unrepeatable design — when it's gone, it's gone.</p>
+        <div class="phead__facts">
+          <span><b id="fCount">17</b> pieces</span>
+          <span>from <b id="fFrom">$38</b></span>
+          <span><b>100%</b> upcycled</span>
+        </div>
+      </div>
+    </div>
+    <div class="phead__strip" aria-hidden="true" id="strip"></div>
+  </section>
+
+  <!-- ====== FILTROS ====== -->
+  <div class="toolbar">
+    <div class="wrap toolbar__in">
+      <div class="toolbar__chips" id="chips" role="tablist" aria-label="Categories"></div>
+      <div class="toolbar__right">
+        <label class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" id="q" placeholder="Search pieces" aria-label="Search pieces">
+        </label>
+        <select id="sort" class="sort" aria-label="Sort">
+          <option value="featured">Featured</option>
+          <option value="new">New drops first</option>
+          <option value="low">Price: low to high</option>
+          <option value="high">Price: high to low</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== PRENDAS ====== -->
+  <section class="shop">
+    <div class="wrap">
+      <p class="shop__count" id="resCount"></p>
+      <div class="shop__grid" id="grid"></div>
+      <div class="shop__empty" id="empty" hidden>
+        <p class="h-l">Nothing on this rack…</p>
+        <p class="lead">Try another word or category — new drops land every week.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PROMESA ====== -->
+  <section class="promise">
+    <div class="wrap promise__grid">
+      <article class="promise__item reveal">
+        <span class="promise__icon">✂</span>
+        <h3>Hand-made locally</h3>
+        <p>Cut, patched and sewn by emerging designers in Panamá.</p>
+      </article>
+      <article class="promise__item reveal" data-d="1">
+        <span class="promise__icon">1/1</span>
+        <h3>One of one</h3>
+        <p>No two pieces are the same. Yours will never be repeated.</p>
+      </article>
+      <article class="promise__item reveal" data-d="2">
+        <span class="promise__icon">♻</span>
+        <h3>Zero new fabric</h3>
+        <p>Every piece is made from donated clothes, nothing else.</p>
+      </article>
+      <article class="promise__item reveal" data-d="3">
+        <span class="promise__icon">✦</span>
+        <h3>A story included</h3>
+        <p>Each garment comes with the story of what it used to be.</p>
       </article>
     </div>
   </section>
 
-  <!-- ====== PÁGINA 9: Footer ====== -->
-  <footer class="footer">
-    <div class="footer__top">
-      <div class="footer__brand">
-        <img src="img/logo.png" alt="REEVA" class="footer__logo">
-        <p>REEVA conecta personas, diseñadores emergentes y moda sostenible para darle una segunda vida a cada prenda.</p>
-      </div>
+  </main>
 
-      <div class="footer__contact">
-        <h4>Contact</h4>
-        <a href="mailto:contacto@reeva.pa">contacto@reeva.pa</a>
-        <p>+507 8000-0000</p>
-        <p>Calle de la Innovación 123, Ciudad de Panamá</p>
+  <!-- ===== PÁGINA: BLOG ===== -->
+  <main class="page" id="blog" data-title="Blog" hidden>
+  <section class="phead phead--blog">
+    <div class="wrap phead__grid">
+      <div>
+        <span class="eyebrow reveal">Stories from the rack</span>
+        <h1 class="h-xxl reveal" data-d="1">The <span class="phead__accent">Blog</span></h1>
       </div>
+      <p class="lead reveal" data-d="2">Notes on waste, makers, style and the people behind every REEVA piece.</p>
+    </div>
+  </section>
 
-      <div class="footer__follow">
-        <h4>Follow Us</h4>
-        <div class="footer__social">
-          <a href="#"><img src="img/facebook.svg" alt="Facebook"></a>
-          <a href="#"><img src="img/instagram.svg" alt="Instagram"></a>
-          <a href="#"><img src="img/youtube.svg" alt="YouTube"></a>
-          <a href="#"><img src="img/x.svg" alt="X"></a>
-          <a href="#"><img src="img/linkedin.svg" alt="LinkedIn"></a>
-          <a href="#"><img src="img/tiktok.svg" alt="TikTok"></a>
+  <section class="blog">
+    <div class="wrap">
+      <article class="feature reveal" id="feature" tabindex="0"></article>
+
+      <div class="toolbar__chips blog__chips" id="bchips"></div>
+      <div class="posts" id="posts"></div>
+
+      <div class="news reveal">
+        <div>
+          <h2 class="h-l">New drops &amp; stories,<br>once a month.</h2>
+          <p class="lead">No spam — just the pieces that are about to land and the people who made them.</p>
         </div>
+        <form class="join__form" id="nform">
+          <input type="email" required placeholder="your@email.com" aria-label="Email">
+          <button class="btn btn--cream" type="submit">Subscribe <span class="arr">&rarr;</span></button>
+          <p class="dform__msg" id="nmsg" role="status"></p>
+        </form>
       </div>
     </div>
+  </section>
 
-    <div class="footer__bottom">
-      <p>© 2026 REEVA. Todos los derechos reservados.</p>
-      <p>Where Every Garment Tells a New Story.</p>
-    </div>
-  </footer>
+  <!-- lector de artículos -->
+  <div class="reader" id="reader" role="dialog" aria-modal="true" aria-labelledby="rTitle">
+    <div class="reader__bar"><span id="rProgress"></span></div>
+    <button class="icon-btn reader__close" id="rClose" type="button" aria-label="Close article">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <article class="reader__in">
+      <span class="eyebrow" id="rMeta"></span>
+      <h2 id="rTitle"></h2>
+      <div class="reader__img" id="rImg"></div>
+      <div class="reader__body" id="rBody"></div>
+      <button class="btn btn--ghost" id="rNext" type="button">Next story <span class="arr">&rarr;</span></button>
+    </article>
+  </div>
 
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
